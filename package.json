@@ -1,0 +1,62 @@
+{
+  "name": "@TODO_TS_TEMPLATE",
+  "version": "0.2.0",
+  "license": "MIT",
+  "author": {
+    "name": "Formidable",
+    "url": "https://formidable.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormidableLabs/@TODO_TS_TEMPLATE.git"
+  },
+  "homepage": "https://github.com/FormidableLabs/@TODO_TS_TEMPLATE",
+  "keywords": [
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./dist/index.js"
+    ],
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "checks": "yarn typecheck && yarn lint && yarn test && yarn build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --quiet",
+    "preversion": "yarn checks",
+    "build": "tsup",
+    "prepublishOnly": "yarn build",
+    "changeset": "changeset",
+    "version": "yarn changeset version && yarn install --frozen-lockfile",
+    "test": "vitest run"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@svitejs/changesets-changelog-github-compact": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.7.1",
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4",
+    "vitest": "^0.28.4"
+  },
+  "engines": {
+    "node": ">= 14"
+  }
+}
