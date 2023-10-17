@@ -1,1 +1,3 @@
-# @TODO_TS_TEMPLATE
+# `ts-simplify`
+
+CLI tool to compile TypeScript types into simple, alias-free primitives.

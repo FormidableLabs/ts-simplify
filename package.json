@@ -1,5 +1,5 @@
 {
-  "name": "@TODO_TS_TEMPLATE",
+  "name": "ts-simplify",
   "version": "0.2.0",
   "license": "MIT",
   "author": {
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FormidableLabs/@TODO_TS_TEMPLATE.git"
+    "url": "https://github.com/FormidableLabs/ts-simplify.git"
   },
-  "homepage": "https://github.com/FormidableLabs/@TODO_TS_TEMPLATE",
+  "homepage": "https://github.com/FormidableLabs/ts-simplify",
   "keywords": [
     "typescript"
   ],

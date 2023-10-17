@@ -1,16 +1,16 @@
-# @TODO_TS_TEMPLATE
+# ts-simplify
 
 TODO: SHORT DESCRIPTION
 
 ## Install
 
 ```sh
-yarn add @TODO_TS_TEMPLATE
+yarn add ts-simplify
 ```
 
 ## Usage
 
 ```ts
-import { TODO } from '@TODO_TS_TEMPLATE';
+import { TODO } from 'ts-simplify';
  
 ```
