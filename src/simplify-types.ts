@@ -26,11 +26,16 @@ export function simplifyTypes(config: { sourceFile: string }) {
                 const name = type.getName();
                 return unindent(`
                   export type ${name} = SimplifyDeep<SOURCES.${name}>;
-                  //export type ${name} = SOURCES.${name};
                 `);
               })
               .join("")}
           `);
+    },
+    outputOptions: {
+      header: unindent(`
+        /* Types generated from '${config.sourceFile}' */
+      `),
+      generateUniqueSymbols: true,
     },
   });
 }

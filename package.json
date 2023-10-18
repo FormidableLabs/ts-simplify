@@ -40,7 +40,8 @@
     "prepublishOnly": "yarn build",
     "changeset": "changeset",
     "version": "yarn changeset version && yarn install --frozen-lockfile",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "debug": "^4.3.4",
