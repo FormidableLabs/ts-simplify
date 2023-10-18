@@ -12,7 +12,8 @@ describe("simplify-types", () => {
         export type Foo = { a: 'A'; b?: 'B' | undefined; nested: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }; array: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[]; };
         export type FooPartial = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; } | undefined; array?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[] | undefined; };
         export type FooRequired = { a: 'A'; b: 'B'; nested: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }; array: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[]; };
-        export type FooDeepPartial = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; } | undefined; array?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; }[] | undefined; };"
+        export type FooPartialDeep = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; } | undefined; array?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; }[] | undefined; };
+        export type FooRequiredDeep = { a: 'A'; b: 'B'; nested: { c: 'C'; d: 'D'; e: 'E'[]; }; array: { c: 'C'; d: 'D'; e: 'E'[]; }[]; };"
       `);
     });
   });

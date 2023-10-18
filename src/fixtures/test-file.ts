@@ -1,4 +1,4 @@
-import { DeepPartial } from "../utils/type-utils";
+import { PartialDeep, RequiredDeep } from "../utils/type-utils";
 
 export type Foo = {
   a: "A";
@@ -17,4 +17,6 @@ export type FooPartial = Partial<Foo>;
 
 export type FooRequired = Required<Foo>;
 
-export type FooDeepPartial = DeepPartial<Foo>;
+export type FooPartialDeep = PartialDeep<Foo>;
+
+export type FooRequiredDeep = RequiredDeep<Foo>;

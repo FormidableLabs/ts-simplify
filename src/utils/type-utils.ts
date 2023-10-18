@@ -1,8 +1,16 @@
-export type DeepPartial<T> = T extends Array<infer TItem>
-  ? Array<DeepPartial<TItem>>
+export type PartialDeep<T> = T extends Array<infer TItem>
+  ? Array<PartialDeep<TItem>>
   : T extends object
   ? {
-      [P in keyof T]?: DeepPartial<T[P]>;
+      [P in keyof T]?: PartialDeep<T[P]>;
+    }
+  : T;
+
+export type RequiredDeep<T> = T extends Array<infer TItem>
+  ? Array<RequiredDeep<TItem>>
+  : T extends object
+  ? {
+      [P in keyof T]-?: RequiredDeep<T[P]>;
     }
   : T;
 
