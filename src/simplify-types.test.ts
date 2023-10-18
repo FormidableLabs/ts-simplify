@@ -1,19 +1,19 @@
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import { simplifyTypes } from "./simplify-types";
 
-beforeEach(() => {
-  //
-});
-
 describe("simplify-types", () => {
-  test("it renders", async () => {
-    const result = simplifyTypes({ sourceFile: "./src/tests/test-file.ts" });
-    expect(result).toMatchInlineSnapshot(`
-      "/* Types generated from './src/tests/test-file.ts' */
-        
+  describe("./src/fixtures/test-file.ts", () => {
+    it("renders the entire compiled file correctly", async () => {
+      const result = simplifyTypes({ sourceFile: "./src/fixtures/test-file.ts" });
+      expect(result).toMatchInlineSnapshot(`
+        "/* Types generated from './src/fixtures/test-file.ts' */
+          
 
-      export type Foo = { a: \\"A\\"; b?: \\"B\\" | undefined; nested: { c: \\"C\\"; d?: \\"D\\" | undefined; }; };
-      export type FooSimple = { a: \\"A\\"; b?: \\"B\\" | undefined; nested: { c: \\"C\\"; d?: \\"D\\" | undefined; }; };"
-    `);
+        export type Foo = { a: 'A'; b?: 'B' | undefined; nested: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }; array: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[]; };
+        export type FooPartial = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; } | undefined; array?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[] | undefined; };
+        export type FooRequired = { a: 'A'; b: 'B'; nested: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }; array: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[]; };
+        export type FooDeepPartial = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; } | undefined; array?: { c?: 'C' | undefined; d?: 'D' | undefined; e?: 'E'[] | undefined; }[] | undefined; };"
+      `);
+    });
   });
 });

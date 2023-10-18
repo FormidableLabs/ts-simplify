@@ -51,7 +51,12 @@ export function compileTypes(config: CompileConfig) {
     // Expand the source type into its expanded form:
     const compiledType = sourceType
       .getType()
-      .getText(undefined, TypeFormatFlags.UseAliasDefinedOutsideCurrentScope | TypeFormatFlags.NoTruncation);
+      .getText(
+        undefined,
+        TypeFormatFlags.UseAliasDefinedOutsideCurrentScope |
+          TypeFormatFlags.NoTruncation |
+          TypeFormatFlags.UseSingleQuotesForStringLiteralType
+      );
 
     // Add this expanded type to the output:
     outputFile.addTypeAlias({

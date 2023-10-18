@@ -36,7 +36,7 @@ const config = (() => {
 
   const outputFile = output || source[1] || "";
   if (outputFile && !overwrite && fs.existsSync(outputFile)) {
-    console.error(`File '${outputFile}' already exists.  Use --overwrite to overwrite it.`);
+    console.error(`File '${outputFile}' already exists.  Use --overwrite (-f) to overwrite it.`);
     process.exit(1);
   }
   return { outputFile, sourceFile };
