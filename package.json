@@ -36,7 +36,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src --quiet",
     "preversion": "yarn checks",
-    "build": "tsup",
+    "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "yarn build",
     "changeset": "changeset",
     "version": "yarn changeset version && yarn install --frozen-lockfile",
@@ -60,7 +60,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
-    "tsup": "^6.3.0",
     "typescript": "^5.2.2",
     "vitest": "^0.28.4"
   },
