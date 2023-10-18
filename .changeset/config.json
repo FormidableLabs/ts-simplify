@@ -3,7 +3,7 @@
   "changelog": [
     "@svitejs/changesets-changelog-github-compact",
     {
-      "repo": "FormidableLabs/@TODO_TS_TEMPLATE"
+      "repo": "FormidableLabs/ts-simplify"
     }
   ],
   "access": "public",

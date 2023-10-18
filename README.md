@@ -1,16 +1,16 @@
-# @TODO_TS_TEMPLATE
+# ts-simplify
 
-TODO: SHORT DESCRIPTION
+CLI tool to compile TypeScript types into simple, alias-free primitives.
 
 ## Install
 
 ```sh
-yarn add @TODO_TS_TEMPLATE
+yarn add ts-simplify
 ```
 
 ## Usage
 
 ```ts
-import { TODO } from '@TODO_TS_TEMPLATE';
+import { TODO } from 'ts-simplify';
  
 ```
