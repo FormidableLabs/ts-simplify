@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { simplifyTypes } from "./simplify-types";
 
 describe("simplify-types", () => {
@@ -7,7 +7,7 @@ describe("simplify-types", () => {
       const result = simplifyTypes({ sourceFile: "./src/fixtures/test-file.ts" });
       expect(result).toMatchInlineSnapshot(`
         "/* Types generated from './src/fixtures/test-file.ts' */
-          
+
 
         export type Foo = { a: 'A'; b?: 'B' | undefined; nested: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }; array: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[]; };
         export type FooPartial = { a?: 'A' | undefined; b?: 'B' | undefined; nested?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; } | undefined; array?: { c: 'C'; d?: 'D' | undefined; e: 'E'[]; }[] | undefined; };
