@@ -1,6 +1,6 @@
 # ts-simplify
 
-TODO: SHORT DESCRIPTION
+CLI tool to compile TypeScript types into simple, alias-free primitives.
 
 ## Install
 
