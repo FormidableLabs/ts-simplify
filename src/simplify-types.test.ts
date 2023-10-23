@@ -17,4 +17,15 @@ describe("simplify-types", () => {
       `);
     });
   });
+  describe("./src/fixtures/external-types.ts", () => {
+    it("renders the entire compiled file correctly", async () => {
+      const result = simplifyTypes({ sourceFile: "./src/fixtures/external-types.ts" });
+      expect(result).toMatchInlineSnapshot(`
+        "/* Types generated from './src/fixtures/external-types.ts' */
+          
+
+        export type HTMLAttrs = { className: string; readonly clientWidth: number; textContent: string | null; autofocus: boolean; };"
+      `);
+    });
+  });
 });
